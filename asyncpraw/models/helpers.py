@@ -50,7 +50,8 @@ class LiveHelper(AsyncPRAWBase):
         .. note::
             This method doesn't support IDs for live updates.
 
-        .. warning:
+        .. warning::
+
             Unlike :meth:`.Reddit.info`, the output of this method
             may not reflect the order of input.
 

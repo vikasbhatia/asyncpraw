@@ -14,7 +14,7 @@ With Async PRAW, there is now support for interacting with Reddit inside an
 asynchronous environment, most commonly, Discord bots.
 
 This tutorial will show you how to build a bot that monitors a particular
-subreddit, `/r/AskReddit <https://www.reddit.com/r/AskReddit/>`_, for new
+subreddit, `r/AskReddit <https://www.reddit.com/r/AskReddit/>`_, for new
 submissions containing simple questions and replies with an appropriate link to
 lmgtfy_ (Let Me Google That For You).
 
@@ -64,7 +64,7 @@ creating an instance of :class:`.Reddit`:
 
     import asyncpraw
 
-    reddit = asyncpraw.Reddit(user_agent="LMGTFY (by /u/USERNAME)",
+    reddit = asyncpraw.Reddit(user_agent="LMGTFY (by u/USERNAME)",
                         client_id="CLIENT_ID", client_secret="CLIENT_SECRET",
                         username="USERNAME", password="PASSWORD")
 
@@ -76,7 +76,7 @@ account that registered the application are required.
    <https://github.com/reddit/reddit/wiki/oauth2-app-types>`_.
 
 
-Step 2: Monitoring New Submissions to /r/AskReddit
+Step 2: Monitoring New Submissions to r/AskReddit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 PRAW provides a convenient way to obtain new submissions to a given
@@ -97,7 +97,7 @@ subreddits can be specified using the special name ``all``.
 Step 3: Analyzing the Submission Titles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now that we have a stream of new submissions to /r/AskReddit, it is time to see
+Now that we have a stream of new submissions to r/AskReddit, it is time to see
 if their titles contain a simple question. We naïvely define a simple question
 as:
 

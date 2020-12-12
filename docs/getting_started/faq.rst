@@ -7,21 +7,21 @@ Q: How can I refresh a comment/subreddit/submission?
 
 A: There is two ways to do this:
 
-    * Directly calling the constructors will refresh the value:
+  * Directly calling the constructors will refresh the value:
 
-        .. code-block:: python
+    .. code-block:: python
 
-            await reddit.comment(id=comment.id)
-            await reddit.subreddit(display_name=subreddit.display_name)
-            await reddit.submission(id=submission.id)
+        await reddit.comment(id=comment.id)
+        await reddit.subreddit(display_name=subreddit.display_name)
+        await reddit.submission(id=submission.id)
 
-    * Calling :meth:`~.RedditBase.load`:
+  * Calling :meth:`~.RedditBase.load`:
 
-        .. code-block:: python
+    .. code-block:: python
 
-            await comment.load()
-            await subreddit.load()
-            await submission.load()
+        await comment.load()
+        await subreddit.load()
+        await submission.load()
 
 .. _faq2:
 
@@ -49,7 +49,7 @@ Q: Help, I keep on getting redirected to ``/r/subreddit/login/``!
 
 Q2: I keep on getting this exception:
 
-.. code-block:: none
+.. code-block::
 
     asyncprawcore.exceptions.Redirect: Redirect to /r/subreddit/login/ (You may be trying to perform a non-read-only action via a read-only instance.)
 

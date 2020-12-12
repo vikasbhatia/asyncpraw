@@ -4,6 +4,12 @@ Maintainers
 - Joel Payne <lilspazjoekp@gmail.com> `@LilSpazJoekp <https://github.com/lilspazjoekp>`_
 
 
+PRAW Author
+===========
+
+- Bryce Boe <bbzbryce@gmail.com> `@bboe <https://github.com/bboe>`_
+
+
 Documentation Contributors
 ==========================
 
@@ -18,12 +24,6 @@ Documentation Contributors
 - Pim Tholhuijsen `@mandjevant <https://github.com/mandjevant>`_
 
 <!-- - Add "Name <email (optional)> and github profile link" above this line. -->
-
-
-PRAW Author
-===========
-
-- Bryce Boe <bbzbryce@gmail.com> `@bboe <https://github.com/bboe>`_
 
 
 Logo Creator

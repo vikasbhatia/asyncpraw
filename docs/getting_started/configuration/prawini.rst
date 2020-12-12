@@ -137,7 +137,7 @@ individual variables, for example:
    bot_name=MyBot
    bot_version=1.2.3
    bot_author=MyUser
-   user_agent=script:%(bot_name)s:v%(bot_version)s (by /u/%(bot_author)s)
+   user_agent=script:%(bot_name)s:v%(bot_version)s (by u/%(bot_author)s)
 
 This uses basic interpolation thus :class:`.Reddit` need to be initialized as
 follows:
@@ -147,7 +147,7 @@ follows:
    reddit = asyncpraw.Reddit("bot1", config_interpolation="basic")
 
 Then the value of ``reddit.config.user_agent`` will be
-``script:MyBot:v1.2.3 (by /u/MyUser)``.
+``script:MyBot:v1.2.3 (by u/MyUser)``.
 
 See `Interpolation of values
 <https://docs.python.org/3/library/configparser.html#interpolation-of-values>`_

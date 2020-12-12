@@ -55,7 +55,7 @@ is as simple as:
    reddit = asyncpraw.Reddit(client_id="SI8pN3DSbt0zor",
                         client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
                         password="1guiwevlfo00esyy",
-                        user_agent="testscript by /u/fakebot3",
+                        user_agent="testscript by u/fakebot3",
                         username="fakebot3")
 
 To verify that you are authenticated as the correct user run:
@@ -86,7 +86,7 @@ A 2FA token can be used by joining it to the password with a colon:
    reddit = asyncpraw.Reddit(client_id="SI8pN3DSbt0zor",
                         client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
                         password='1guiwevlfo00esyy:955413',
-                        user_agent="testscript by /u/fakebot3",
+                        user_agent="testscript by u/fakebot3",
                         username="fakebot3")
 
 However, for such an app there is little benefit to using 2FA. The token
@@ -109,9 +109,9 @@ A **code flow** application is useful for two primary purposes:
   accounts.
 * You have a personal-use script application and you either want to
 
-   * limit the access one of your Async PRAW-based programs has to Reddit
-   * avoid the hassle of 2FA (described above)
-   * not pass your username and password to Async PRAW (and thus not keep it in memory)
+  * limit the access one of your Async PRAW-based programs has to Reddit
+  * avoid the hassle of 2FA (described above)
+  * not pass your username and password to Async PRAW (and thus not keep it in memory)
 
 When registering your application you must provide a valid redirect URI. If you
 are running a website you will want to enter the appropriate callback URL and
@@ -137,7 +137,7 @@ URL. You can do that as follows:
    reddit = asyncpraw.Reddit(client_id="SI8pN3DSbt0zor",
                         client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
                         redirect_uri="http://localhost:8080",
-                        user_agent="testscript by /u/fakebot3")
+                        user_agent="testscript by u/fakebot3")
    print(reddit.auth.url(["identity"], "...", "permanent"))
 
 The above will output an authorization URL for a permanent token that has only

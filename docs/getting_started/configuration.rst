@@ -31,7 +31,7 @@ Using an HTTP or HTTPS proxy with Async PRAW
 --------------------------------------------
 
 Async PRAW internally relies upon the `aiohttp <https://docs.aiohttp.org/>`_
-package to handle HTTP requests. Aiohttp supports use of ``HTTP_PROXY`` and
+package to handle HTTP requests. aiohttp supports use of ``HTTP_PROXY`` and
 ``HTTPS_PROXY`` environment variables in order to proxy HTTP and HTTPS requests
 respectively [`ref
 <https://docs.aiohttp.org/en/stable/client_advanced.html?highlight=proxy#proxy-support>`_].
@@ -61,7 +61,7 @@ aiohttp and configuring Async PRAW like so:
                          client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
                          password="1guiwevlfo00esyy",
                          requestor_kwargs={"session": session},  # pass Session
-                         user_agent="testscript by /u/fakebot3",
+                         user_agent="testscript by u/fakebot3",
                          username="fakebot3")
 
 
@@ -75,8 +75,8 @@ configure a `ClientSession
 Async PRAW.
 
 For example, some networks use self-signed SSL certificates when connecting
-to HTTPS sites. By default, this would raise an exception in Aiohttp. To
-use a self-signed SSL certificate without an exception from Aiohttp, first
+to HTTPS sites. By default, this would raise an exception in aiohttp. To
+use a self-signed SSL certificate without an exception from aiohttp, first
 export the certificate as a ``.pem`` file. Then configure Async PRAW like so:
 
 .. code-block:: python
@@ -95,7 +95,7 @@ export the certificate as a ``.pem`` file. Then configure Async PRAW like so:
                          client_secret="xaxkj7HNh8kwg8e5t4m6KvSrbTI",
                          password="1guiwevlfo00esyy",
                          requestor_kwargs={"session": session},  # pass Session
-                         user_agent="testscript by /u/fakebot3",
+                         user_agent="testscript by u/fakebot3",
                          username="fakebot3")
 
 

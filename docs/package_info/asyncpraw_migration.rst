@@ -25,33 +25,43 @@ some now do this by default. For example:
 
 * PRAW:
 
-    .. code-block:: python
+  .. code-block:: python
 
-        submission = reddit.submission('id') # network request is not made and object is lazily loaded
-        print(submission.score) # network request is made and object is fully fetched
+      # network request is not made and object is lazily loaded
+      submission = reddit.submission('id')
+
+      # network request is made and object is fully fetched
+      print(submission.score)
 
 * Async PRAW:
 
-    .. code-block:: python
+  .. code-block:: python
 
-        submission = await reddit.submission('id') # network request made and object is fully loaded
-        print(submission.score) # network request is not made as object is already fully fetched
+      # network request made and object is fully loaded
+      submission = await reddit.submission('id')
+
+      # network request is not made as object is already fully fetched
+      print(submission.score)
 
 Now, lazy loading is not gone completely and can still be done. For example, if you
 only wanted to remove a post, you don't need the object fully fetched to do that.
 
-* PRAW
+* PRAW:
 
-    .. code-block:: python
+  .. code-block:: python
 
-        reddit.submission('id').mod.remove() # object is not fetched and is only removed
+      # object is not fetched and is only removed
+      reddit.submission('id').mod.remove()
 
 * Async PRAW:
 
-    .. code-block:: python
+  .. code-block:: python
 
-        submission = await reddit.submission('id', lazy=True) # network request is not made and object is lazily loaded
-        await submission.mod.remove() # object is not fetched and is only removed
+      # network request is not made and object is lazily loaded
+      submission = await reddit.submission('id', lazy=True)
+
+      # object is not fetched and is only removed
+      await submission.mod.remove()
 
 By default, only :class:`.Subreddit`, :class:`.Redditor`, :class:`.LiveThread`,
 and :class:`.Multireddit` objects are still lazily loaded. You can pass ``fetch=True``
@@ -65,12 +75,16 @@ In addition, there will be a ``load()`` method provided for manually fetching/re
 objects that subclass :class:`.RedditBase`. If you need to later on access an attribute
 you need to call the ``.load()`` method first:
 
-   .. code-block:: python
+.. code-block:: python
 
-        submission = await reddit.submission('id', lazy=True) # object is lazily loaded and no requests are made
-        ...
-        await submission.load()
-        print(submission.score) # network request is not made as object is already fully fetched
+    # object is lazily loaded and no requests are made
+    submission = await reddit.submission('id', lazy=True)
+    ...
+    # network request is made and item is fully fetched
+    await submission.load()
+
+    # network request is not made as object is already fully fetched
+    print(submission.score)
 
 Getting items by Indices
 ------------------------
@@ -82,19 +96,26 @@ In PRAW you could get specific :class:`.WikiPage`, :class:`.RemovalReason`, :cla
 work and has been converted to a ``.get_<item name>(item)`` method. Also, they are not lazily
 loaded by default anymore.
 
-*  PRAW:
+* PRAW:
 
-    .. code-block:: python
+  .. code-block:: python
 
-        page = subreddit.wiki['page'] # lazily creates a WikiPage instance
-        print(page.content_md) # network request is made and item is fully fetched
+      # lazily creates a WikiPage instance
+      page = subreddit.wiki['page']
 
-*  Async PRAW:
+      # network request is made and item is fully fetched
+      print(page.content_md)
 
-    .. code-block:: python
+* Async PRAW:
 
-        page = await subreddit.wiki.get_page('page') # network request made and object is fully loaded
-        print(page.content_md) # network request is not made as WikiPage is already fully fetched``
+  .. code-block:: python
 
-        # using slices
-        rule = await subreddit.mod.rules.get_rule(slice(-3,None)) # to get the last 3 rules
+      # network request made and object is fully loaded
+      page = await subreddit.wiki.get_page('page')
+
+      # network request is not made as WikiPage is already fully fetched``
+      print(page.content_md)
+
+      # using slices
+      rule = await subreddit.mod.rules.get_rule(slice(-3, None))  # to get the last 3 rules
+
