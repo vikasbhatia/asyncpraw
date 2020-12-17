@@ -462,6 +462,7 @@ class Submission(SubmissionListingMixin, UserContentMixin, FullnameMixin, Reddit
             comment_list = await comments.list()
             for comment in comment_list:
                 # do stuff with comment
+                ...
 
         Sort order and comment limit can be set with the ``comment_sort`` and
         ``comment_limit`` attributes before comments are fetched, including
@@ -474,6 +475,7 @@ class Submission(SubmissionListingMixin, UserContentMixin, FullnameMixin, Reddit
             comment_list = await comments.list()
             for comment in comment_list:
                 # do stuff with comment
+                ...
 
         .. note:: The appropriate values for ``comment_sort`` include
            ``confidence``, ``controversial``, ``new``, ``old``, ``q&a``,

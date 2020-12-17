@@ -74,6 +74,7 @@ For example, the code block:
     subreddit = await reddit.subreddit('all')
     async for result in subreddit.search('https://google.com'):
         # do things with results
+        ...
 
 Will become this code block:
 
@@ -82,3 +83,4 @@ Will become this code block:
     subreddit = await reddit.subreddit('all')
     async for result in subreddit.search('url:"https://google.com"'):
         # do things with results
+        ...

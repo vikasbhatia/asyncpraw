@@ -3126,6 +3126,7 @@ class Modmail:
             sub = await reddit.subreddit("all")
             async for conversation in sub.modmail.conversations(state="mod"):
                 # do stuff with conversations
+                ...
 
         """
         params = {}
@@ -3193,6 +3194,7 @@ class Modmail:
             sub = await reddit.subreddit("all")
             async for subreddit in sub.modmail.subreddits():
                 # do stuff with subreddit
+                ...
 
         """
         response = await self.subreddit._reddit.get(API_PATH["modmail_subreddits"])
@@ -3790,7 +3792,7 @@ class SubredditWiki:
 
             subreddit = await reddit.subreddit("test")
             page = await subreddit.wiki.get_page("praw_test")
-            async for item in.page.revisions():
+            async for item in page.revisions():
                 print(item)
 
         """
