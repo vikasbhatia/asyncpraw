@@ -296,7 +296,7 @@ class RuleModeration:
     """
 
     def __init__(self, rule: Rule):
-        """Instantize the RuleModeration class."""
+        """Initialize the RuleModeration class."""
         self.rule = rule
 
     async def delete(self):
@@ -392,7 +392,7 @@ class SubredditRulesModeration:
     """
 
     def __init__(self, subreddit_rules: SubredditRules):
-        """Instantize the SubredditRulesModeration class."""
+        """Initialize the SubredditRulesModeration class."""
         self.subreddit_rules = subreddit_rules
 
     async def add(

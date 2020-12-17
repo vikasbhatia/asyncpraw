@@ -579,7 +579,7 @@ class Subreddit(MessageableMixin, SubredditListingMixin, FullnameMixin, RedditBa
         self._path = API_PATH["subreddit"].format(subreddit=self)
 
     def _fetch_info(self):
-        return ("subreddit_about", {"subreddit": self}, None)
+        return "subreddit_about", {"subreddit": self}, None
 
     async def _fetch_data(self):
         name, fields, params = self._fetch_info()

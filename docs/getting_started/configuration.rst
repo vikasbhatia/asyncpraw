@@ -68,7 +68,7 @@ aiohttp and configuring Async PRAW like so:
 Configuring a custom aiohttp ClientSession
 ------------------------------------------
 
-Async PRAW uses `aiohttp`_ to handle
+Async PRAW uses `aiohttp <https://docs.aiohttp.org/>`_ to handle
 networking. If your use-case requires custom configuration, it is possible to
 configure a `ClientSession
 <https://docs.aiohttp.org/en/stable/client_advanced.html>`_ and then use it with

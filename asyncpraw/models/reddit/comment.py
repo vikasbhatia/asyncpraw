@@ -202,7 +202,7 @@ class Comment(InboxableMixin, UserContentMixin, FullnameMixin, RedditBase):
         super().__setattr__(attribute, value)
 
     def _fetch_info(self):
-        return ("info", {}, {"id": self.fullname})
+        return "info", {}, {"id": self.fullname}
 
     async def _fetch_data(self):
         name, fields, params = self._fetch_info()

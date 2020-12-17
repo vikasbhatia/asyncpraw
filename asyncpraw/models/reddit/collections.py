@@ -169,7 +169,7 @@ class Collection(RedditBase):
         super().__setattr__(attribute, value)
 
     def _fetch_info(self):
-        return ("collection", {}, self._info_params)
+        return "collection", {}, self._info_params
 
     async def _fetch_data(self):
         name, fields, params = self._fetch_info()

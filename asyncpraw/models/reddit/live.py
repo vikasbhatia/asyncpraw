@@ -410,7 +410,7 @@ class LiveThread(RedditBase):
             self.id = id
 
     def _fetch_info(self):
-        return ("liveabout", {"id": self.id}, None)
+        return "liveabout", {"id": self.id}, None
 
     async def _fetch_data(self):
         name, fields, params = self._fetch_info()
